@@ -173,23 +173,18 @@ alt="Generated images for the Drosophilla Larva dataset." />
 Larva dataset.</figcaption>
 </figure>
 
-## Generated The Synthetic Images
+## Generate Synthetic Label
 
-Now, to generate synthetic image, we trained a pix-to-pix GAN Model and
-generated synthetic images for the dataset 1. To generate realistic
-looking images, we want to provide mitochondria and cell membrane masks
-as input. The cell membrane mask are generated using transfer learning
-for this dataset. So the input of the generator of the model is the
-generated cell membrane mask and the mitochondrial mask. On the other
-side the output of the model is the image of the electron microscopy
-dataset (Figure 5). The overall images are not that much realistic. The
-architecture sde on the pip-to-pix gan need to be revised to extarct the
-optimal performance.
+Now a vanilla GAN has been used to generate the label for the cell
+membrane. The left image of the (Figure 5) is the generated label where
+as the right image is the true label. The local pattern in the generated
+cell membrane is quite impressive. However, the global pattern is not so
+impressive.
 
 <figure>
-<img src="gan_em_data_brain.png"
-alt="Generated images for CA1 Hippocampus dataset." />
-<figcaption aria-hidden="true">Generated images for CA1 Hippocampus
+<img src="output.png"
+alt="Generated label for the Drosophilla Larva dataset." />
+<figcaption aria-hidden="true">Generated label for the Drosophilla Larva
 dataset.</figcaption>
 </figure>
 
